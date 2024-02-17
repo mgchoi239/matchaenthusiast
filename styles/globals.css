@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
+*/
+
+section {
+  width: 100%;
+  box-sizing: border-box; /* This ensures padding and border are included in the total width */
+}
+
+.app {
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding and border are included in the total width */
+}
+
+.main-page-image-container {
+  display: flex;
+  img {
+    margin-right: 15px;
+    border-radius: 8px;
+    width: 50px;
+  }
+}
+
+.main {
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  /* padding: 120px 24px 160px 24px; */ /* Comment this line or adjust it */
+  pointer-events: none;
+}
+
+/* .main:before {
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main:after {
+  content: "";
+  background-image: url("/assets/images/grid.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
+} */
+
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  max-width: 640px;
+  background-image: radial-gradient(
+      at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%
+    ),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.15;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+/* Tailwind Styles */
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col mx-auto;
+}
+
+/* .black_btn {
+  @apply rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center;
+}
+
+.outline_btn {
+  @apply rounded-full border border-black bg-transparent py-1.5 px-5 text-black transition-all hover:bg-black hover:text-white text-center text-sm font-inter flex items-center justify-center;
+} */
+
+.head_text {
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-matcha-green sm:text-6xl;
+}
+
+/* .orange_gradient {
+  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+} */
+/* 
+.blue_gradient {
+  @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+} */
+
+.prompt_layout {
+  @apply space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3;
+}
+
+/* Feed Component */
+.feed {
+  @apply mt-16 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
+}
+
+/* Form Component */
+/* .form_textarea {
+  @apply w-full flex rounded-lg h-[200px] mt-2 p-3 text-sm text-gray-500 outline-0;
+} */
+
+/* .form_input {
+  @apply w-full flex rounded-lg mt-2 p-3 text-sm text-gray-500 outline-0;
+} */
+
+/* Nav Component */
+/* .logo_text {
+  @apply max-sm:hidden font-satoshi font-semibold text-2xl text-matcha-green tracking-wide;
+} */
+
+/* .dropdown {
+  @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;
+}
+
+.dropdown_link {
+  @apply text-sm font-inter text-gray-700 hover:text-gray-500 font-medium;
+} */
+
+/* PromptCard Component */
+/* .prompt_card {
+  @apply flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;
+} */
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-start {
+  @apply flex justify-start items-start;
+}
+
+.flex-end {
+  @apply flex justify-end items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+/* .navbar-button {
+  color: black;
+  font-size: 20px;
+} */
+
+/* .matcha_green_btn {
+  @apply rounded-full border border-matcha-green bg-white py-1.5 px-5 text-matcha-green transition-all hover:bg-matcha-green hover:text-white text-center text-sm font-inter flex items-center justify-center;
+} */
+
+.matcha_green_btn {
+  @apply rounded-full border border-matcha-green bg-matcha-green py-1.5 px-5 text-white transition-all hover:bg-white hover:text-matcha-green text-center text-sm font-inter flex items-center justify-center;
+}
+
+.navbar-button:hover {
+  color: #98a886;
+}
+
+.masonry-grid {
+  display: flex;
+  gap: 16px;
+}
+
+.masonry-column {
+  background-clip: padding-box;
+}
+
+.paragraph {
+  /* Additional styles for the paragraph if needed */
+  width: 100%; /* Adjust the maximum width as needed */
+  margin: 15px 0; /* Center the container horizontally */
+  padding: 10px; /* Add padding around the container */
+  border: 1px solid #ddd; /* Add a border for decoration */
+  border-radius: 8px; /* Add rounded corners for a softer look */
+  background-color: #f9f9f9; /* Add a background color for better contrast */
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.masonry-item {
+  position: relative;
+  margin-bottom: 14px;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  /* 1. rounded corners or not
+  overflow: hidden;
+  border-radius: 8px; */
+}
+
+.masonry-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.masonry-item:hover .caption {
+  opacity: 1;
+}
+
+.masonry-item .caption {
+  text-align: center;
+}
+
+/* Add this style if you want to make the image clickable */
+.masonry-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+br {
+  display: block;
+  margin: 2px 0;
+}
+
+.photo-and-text-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #98a886;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+  width: 85%;
+  align-items: center;
+}
+
+.photo-container {
+  max-width: 50%;
+
+  max-width: 800px; /* Increase the maximum width as needed */
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.textContainer {
+  flex: 1;
+  align-items: flex-start;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.textContainer h2 {
+  margin-bottom: 10px;
+}
+
+.textContainer h3 {
+  margin-bottom: 10px;
+}
+
+.textContainer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Add this line to remove default margin */
+}
+
+.textContainer li {
+  margin-bottom: 8px;
+}
+
+/* .photoContainer img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  border-radius: 10px;
+} */
+
+.photocard-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit the color from the parent */
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+}
+
+.home-hero {
+  color: #fff;
+  background: linear-gradient(to right, #98a886, #98a886);
+  background-position: center;
+  height: 91.6vh;
+
+  position: relative;
+}
+@media only screen and (max-width: 37.5em) {
+  .home-hero {
+    height: unset;
+    min-height: unset;
+  }
+}
+.home-hero__socials {
+  margin: 5rem auto 0 auto;
+  display: flex;
+  border: 2px solid #eee;
+  border-left: 2px solid #eee;
+  justify-content: center;
+  max-width: fit-content;
+  img {
+    width: 55px;
+    display: block;
+    margin: 0 0;
+  }
+  a {
+    border-right: 2px solid #eee;
+    padding: 10px;
+  }
+  a:last-child {
+    border-right: none;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .home-hero__socials {
+    display: none;
+  }
+}
+.home-hero__mouse-scroll-cont {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media only screen and (max-width: 37.5em) {
+  .home-hero__mouse-scroll-cont {
+    display: none;
+  }
+}
+.home-hero__social {
+  width: 5rem;
+}
+.home-hero__social-icon-link {
+  width: 100%;
+  display: block;
+  padding: 1.2rem;
+  border-bottom: 2px solid #eee;
+  transition: background 0.3s;
+}
+.home-hero__social-icon-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.home-hero__social-icon-link--bd-none {
+  border-bottom: 0;
+}
+.home-hero__social-icon {
+  width: 100%;
+}
+.home-hero__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90rem;
+  width: 92%;
+}
+@media only screen and (max-width: 37.5em) {
+  .home-hero__content {
+    /* padding: 19rem 0 13rem 0; */
+    margin: auto;
+    position: static;
+    transform: translate(0, 0);
+  }
+}
+.home-hero__info {
+  margin: 3rem auto 0 auto;
+  max-width: 80rem;
+}
+.home-hero__cta {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.heading-primary {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  font-weight: bold;
+}
+@media only screen and (max-width: 37.5em) {
+  .heading-primary {
+    font-size: 4.5rem;
+  }
+}
+
+.text-primary {
+  color: #fff;
+  font-size: 2.2rem;
+  text-align: center;
+  width: 100%;
+  line-height: 1.6;
+}
+@media only screen and (max-width: 37.5em) {
+  .text-primary {
+    font-size: 2rem;
+  }
+}

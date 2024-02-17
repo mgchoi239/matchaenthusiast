@@ -1,0 +1,29 @@
+[
+  {
+    "imageSrc": "/assets/icons/addepar-ico.jpeg",
+    "company": "Addepar",
+    "link": "https://www.linkedin.com/company/addepar/",
+    "role": "Computation Engine Team",
+    "desc1": "• Developed a server monitoring tool in Java integrating Slack with computation and cluster servers in charge of thread logs and Kubernetes pods, eliminating the need for developers to port forward to individual pods to retrieve information.",
+    "desc2": "• Streamlined a server logger on a thread dump manager by tagging logs containing critical information for Sumo Logic queries. The initiative replaced the laborious Regex search process, expediting issue resolution.",
+    "desc3": "• Optimized performance testing by deprecating Comets on AWS EC2 to fully operate on Kubernetes, decreasing 30% testing time."
+  },
+  {
+    "imageSrc": "/assets/icons/samsung-electronics-ico.jpeg",
+    "company": "Samsung Electronics",
+    "link": "https://www.linkedin.com/company/samsung-electronics/",
+    "role": "Network Device Team",
+    "desc1": "• Implemented a backend API in C++ that discriminates and pipelines data from over 1,500 distinct transceiver stations. The API now serves as the initial data processing stage that interfaces with the DevOps and Data Analysis teams.",
+    "desc2": "• Developed a program that reconstructs data structure of network device memory allocation by automating HTML parsing to exchange data between applications on different operating systems.",
+    "desc3": "• In conjunction with the automated parsing program, engineered a data validation program with Shell Script that returns the accuracy rate of server-to-web data transfer, detecting 5% data inaccuracy."
+  },
+  {
+    "imageSrc": "/assets/icons/shoplive-ico.jpeg",
+    "company": "Shoplive",
+    "link": "https://www.linkedin.com/company/shoplive/",
+    "role": "Frontend Team",
+    "desc1": "• Implemented item status and logistics frontend pages for over 5,000 live-commerce products in JavaScript and React.",
+    "desc2": "• Re-designed the company-wide guideline for intuitive data interfaces with Component design pattern, Tailwind CSS and Ant Design frameworks. Additionally replaced duplicate and obsolete class components with functional components.",
+    "desc3": "• Collaborated with the backend team to authenticate data-time accuracy using Data Relay API and Server-Device Time Sync API."
+  }
+]
