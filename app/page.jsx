@@ -33,7 +33,7 @@ const Home = () => (
 
   <section class="home-hero">
     <div class="home-hero__content">
-      <h1 class="heading-primary">Hey, My name is MinGoo</h1>
+      <h1 class="heading-primary">Hey, My name is Min</h1>
       <div class="home-hero__info">
         <p class="text-primary">
           I am a recent UC Berkeley graduate with a Bachelor's degree. I have a
