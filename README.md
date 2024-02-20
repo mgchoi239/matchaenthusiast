@@ -4,4 +4,4 @@ Around three years ago, I created my personal website using React.js. However, a
 
 The current iteration of my website serves as a platform to curate and showcase my experiences and photos. Looking ahead, I am contemplating the possibility of incorporating a fully operational backend. This potential transformation could turn my website into a dynamic medium for mutual communication, featuring elements like comments and chats, offering a more engaging and interactive user experience.
 
-Take a look at the current deployment at [Matcha Enthusiast](https://https://matcha-enthusiast.com/)!
+Take a look at the current deployment at [Matcha Enthusiast](https://matcha-enthusiast.com/)!
